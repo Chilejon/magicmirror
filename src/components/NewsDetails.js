@@ -4,7 +4,8 @@ class NewsDetails extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            name: this.props.name
+            name: this.props.name,
+            url: this.props.url
         };
     }
 
@@ -12,7 +13,7 @@ class NewsDetails extends Component {
     render() {
         return (
             <section>
-                <p>{this.state.name}</p>
+                <p><a href={this.state.url} target='_blank'>{this.state.name}</a></p>
             </section>
         );
     }

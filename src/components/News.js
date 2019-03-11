@@ -27,6 +27,7 @@ class News extends Component {
                 return (
                     <NewsDetails
                         name={news.title}
+                        url={news.url}
                     />
                 );
             }
