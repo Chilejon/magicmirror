@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChuckNorris from './ChuckNorris';
 
 class Time extends Component {
   render() {
@@ -15,8 +16,8 @@ class Time extends Component {
     var todaysDate = dd + '/' + mm + '/' + yyyy;
 
     var h = today.getHours()
-    var m = today.getMinutes() //January is 0!
-    var theTime = h + ':' + m
+    var min = (today.getMinutes()<10?'0':'') + today.getMinutes()
+    var theTime = h + ':' + min
 
     var goodMessage = ''
 
@@ -49,9 +50,10 @@ class Time extends Component {
 
     return (
       <fragment>
-        <p>Good {goodMessage}</p>
-        <p>{theTime}</p>
-        <p>{todaysDate}</p>
+        <h2>Good {goodMessage}, {this.props.name}</h2>
+        <h3>{theTime}</h3>
+        <h3>{todaysDate}</h3>
+        <ChuckNorris />
       </fragment>
     );
   }

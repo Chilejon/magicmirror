@@ -5,12 +5,34 @@ import News from './components/News'
 import './App.css'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        name: 'Jon'
+    };
+}
+
   render() {
     return (
       <fragment>
-        <Time />
+       
+        
+        
+
+        <div className="wrapper">
+        <div className="box a">
+        <Time name={this.state.name} />
+        
+        </div>
+        <div className="box b">
         <Weather />
+        </div>
+        <div className="box c">
         <News />
+        </div>
+        </div>
+
+
       </fragment>
     );
   }
