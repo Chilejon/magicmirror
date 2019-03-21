@@ -65,17 +65,17 @@ body {
 }
 
 .a {
-  background-color: orangered;
+  background-color:#c3c3c3;
   text-align: center;
 }
 
 .b {
-  background-color: blue;
+  background-color: #d3d3d3;
   text-align: center;
 }
 
 .c {
-  background-color: green;
+  background-color: #d7d7d7;
 }
 .c a:link{
   color:#FFFFFF;
